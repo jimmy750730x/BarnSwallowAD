@@ -62,6 +62,9 @@
     .bg-theme-moments {
       background: linear-gradient(180deg, #CEE5CC 0%, #BDDCBB 100%);
     }
+    .bg-theme-map {
+      background: linear-gradient(180deg, #C2DFBF 0%, #B0D4AC 100%);
+    }
     .bg-theme-vket {
       background: linear-gradient(180deg, #1A3445 0%, #0F222F 100%);
     }
@@ -443,7 +446,84 @@
       </div>
     </section>
 
-    <!-- 第六幕：將這份溫柔延續至虛擬世界 (VKET 3D 模型領取) — 整頁滿版 -->
+    <!-- 第六幕：全台足跡 — 家燕繁殖熱度地圖 (Citizen Science) — 整頁滿版 -->
+    <section id="sec-map" class="min-h-screen w-full flex items-center justify-center py-20 px-4 sm:px-8">
+      <div class="max-w-5xl mx-auto w-full">
+        <!-- 頂部標題引言 -->
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="text-xs sm:text-sm font-bold tracking-widest text-natureGreen uppercase mb-2 block font-maru">
+            {{ t('sec_map_subtitle') }}
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-bold font-maru text-swallowBlue mb-4 leading-tight">
+            {{ t('sec_map_title') }}
+          </h2>
+          <p class="text-warmMuted text-sm sm:text-base leading-relaxed text-balance">
+            {{ t('sec_map_desc') }}
+          </p>
+        </div>
+
+        <!-- 成果特色三大亮點 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-7 border border-white/90 shadow-warm-lg flex flex-col justify-between">
+            <div>
+              <div class="w-11 h-11 rounded-2xl bg-natureGreenLight text-natureGreen flex items-center justify-center text-xl mb-4 font-bold">
+                📍
+              </div>
+              <h3 class="font-bold text-lg text-swallowBlue mb-2 font-maru">{{ t('sec_map_feat1_title') }}</h3>
+              <p class="text-xs sm:text-sm text-warmMuted leading-relaxed">{{ t('sec_map_feat1_desc') }}</p>
+            </div>
+          </div>
+
+          <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-7 border border-white/90 shadow-warm-lg flex flex-col justify-between">
+            <div>
+              <div class="w-11 h-11 rounded-2xl bg-blue-100 text-swallowBlue flex items-center justify-center text-xl mb-4 font-bold">
+                🗺️
+              </div>
+              <h3 class="font-bold text-lg text-swallowBlue mb-2 font-maru">{{ t('sec_map_feat2_title') }}</h3>
+              <p class="text-xs sm:text-sm text-warmMuted leading-relaxed">{{ t('sec_map_feat2_desc') }}</p>
+            </div>
+          </div>
+
+          <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-7 border border-white/90 shadow-warm-lg flex flex-col justify-between">
+            <div>
+              <div class="w-11 h-11 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-4 font-bold">
+                🤝
+              </div>
+              <h3 class="font-bold text-lg text-swallowBlue mb-2 font-maru">{{ t('sec_map_feat3_title') }}</h3>
+              <p class="text-xs sm:text-sm text-warmMuted leading-relaxed">{{ t('sec_map_feat3_desc') }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 核心行動卡片 (直通熱地圖 Web App) -->
+        <div class="bg-gradient-to-r from-swallowBlue to-[#1E4260] text-white rounded-3xl p-8 sm:p-10 shadow-warm-lg border border-white/20 text-center relative overflow-hidden">
+          <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+            <h3 class="text-xl sm:text-2xl font-bold font-maru">
+              {{ t('sec_map_cta_title') }}
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-200 leading-relaxed">
+              {{ t('sec_map_cta_desc') }}
+            </p>
+            <div class="pt-2">
+              <a 
+                href="https://wbst-ds923plus.synology.me/barnSwallowNestHeatMapVue/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 px-8 py-3.5 bg-swallowYellow text-warmDark font-bold rounded-full shadow-lg hover:bg-yellow-400 hover:scale-105 transition-all font-maru text-sm sm:text-base">
+                <span>{{ t('sec_map_btn') }}</span>
+                <span class="text-lg">↗</span>
+              </a>
+            </div>
+            <p class="text-[11px] sm:text-xs text-gray-300 italic pt-1">
+              {{ t('sec_map_note') }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 第七幕：將這份溫柔延續至虛擬世界 (VKET 3D 模型領取) — 整頁滿版 -->
     <section id="sec-vket" class="min-h-screen w-full flex items-center justify-center py-20 px-4 sm:px-8">
       <div class="bg-gradient-to-b from-[#163047] to-[#0D1D2C] text-white rounded-3xl p-8 sm:p-16 shadow-2xl border border-white/10 max-w-4xl mx-auto w-full text-center">
         <span class="text-xs sm:text-sm font-bold tracking-widest text-swallowYellow uppercase mb-4 block font-maru">Virtual Market 2026 Winter</span>
@@ -516,6 +596,7 @@
       nav_conflict: "現實衝突",
       nav_solution: "燕板解方",
       nav_moments: "現場見證",
+      nav_map: "全台足跡",
       nav_vket: "虛擬世界",
 
       sec1_subtitle: "街道記憶",
@@ -557,6 +638,20 @@
       photo3_title: "融入街景的共生之美",
       photo3_desc: "在熱鬧的店鋪門前，紅色的剪紙托板靜靜托起一個新生命，人來人往中實踐著最樸實的生態尊重。",
 
+      sec_map_subtitle: "全民科學成果",
+      sec_map_title: "看見全台的生命軌跡 ── 家燕繁殖熱度地圖",
+      sec_map_desc: "從繁華都會到純樸鄉鎮，全台灣的居民與志工走入街角巷弄，共同記錄下這份珍貴的築巢分布大數據。這不僅是一項科學調查，更是一幅由全台灣人對野鳥的溫柔關懷所凝聚而成的即時生態圖譜。",
+      sec_map_feat1_title: "街角巷弄的真實足跡",
+      sec_map_feat1_desc: "匯聚全台各縣市騎樓屋簷下的第一線觀察紀錄，完整呈現家燕與台灣城鄉聚落緊密共存的真實分布。",
+      sec_map_feat2_title: "動態熱力視覺化呈現",
+      sec_map_feat2_desc: "透過地理資訊系統 (GIS) 視覺化技術，精準反映每年春夏繁殖季節的築巢熱區與族群消長趨勢。",
+      sec_map_feat3_title: "溫柔守護的公民力量",
+      sec_map_feat3_desc: "展現社區店家、志工與大眾自發參與的保育動能，讓生冷的都市地圖化作充滿生命溫度的共生檔案。",
+      sec_map_cta_title: "全台灣家燕繁殖熱度地圖系統 (GIS Web App)",
+      sec_map_cta_desc: "歡迎進入即時互動地圖，點選探索台灣各縣市鄉鎮的燕巢通報點位、育雛紀錄與分布熱區。",
+      sec_map_btn: "前往探索全台家燕繁殖熱度地圖",
+      sec_map_note: "※ 由台北市野鳥學會 (WBST) 建立之即時互動式地理資訊系統",
+
       vket_title: "把這隻小燕子帶回你的虛擬世界",
       vket_desc: "我們將這份來自台灣騎樓的溫暖故事，以 3D 數位化形式帶到了 Virtual Market 2026 Winter。這隻細膩的家燕 3D 模型完全免費提供下載，歡迎將牠放在您的虛擬世界或化身身旁。",
       vket_btn_booth: "前往 BOOTH 免費領取 3D 模型",
@@ -594,6 +689,7 @@
       nav_conflict: "現実の摩擦",
       nav_solution: "ツバメ受け板",
       nav_moments: "現場の風景",
+      nav_map: "台湾全土足跡",
       nav_vket: "メタバース",
 
       sec1_subtitle: "街の風景",
@@ -635,6 +731,20 @@
       photo3_title: "街並みに溶け込む共生のしるし",
       photo3_desc: "看板の下で、赤い受け板が新しい命を支えています。行き交う人々が思わず足を止め、笑顔になる街角です。",
 
+      sec_map_subtitle: "シチズンサイエンスの成果",
+      sec_map_title: "街角に広がる生命の軌跡 ── 台湾全土ツバメ繁殖ヒートマップ",
+      sec_map_desc: "大都市から長閑な町まで、台湾中の住民やボランティアが身近な軒先を歩いて記録した、貴重なツバメの営巣ビッグデータ。単なる科学調査にとどまらず、台湾社会が野生動物に寄せるあたたかな眼差しが可視化されたリアルタイムマップです。",
+      sec_map_feat1_title: "街の軒先から集まる生きた足跡",
+      sec_map_feat1_desc: "台湾各地のアーケードや軒下から寄せられたリアルな観察記録を集積し、人とツバメが寄り添う暮らしの広がりを示します。",
+      sec_map_feat2_title: "視覚化された繁殖ホットスポット",
+      sec_map_feat2_desc: "GIS（地理情報システム）ヒートマップにより、毎年の春夏の繁殖シーズンにおける営巣密度や生息動態をひと目で把握できます。",
+      sec_map_feat3_title: "市民のぬくもりが紡ぐ共生の記録",
+      sec_map_feat3_desc: "店舗の店主や地域の人々が自発的に見守り記録した成果。都市を無機質なコンクリートではなく、生命を育む場所に変える取り組みです。",
+      sec_map_cta_title: "台湾全土ツバメ繁殖ヒートマップ・システム (GIS Web App)",
+      sec_map_cta_desc: "オンライン対話型マップにアクセスし、台湾各地域の営巣報告ポイントや分布状況をリアルタイムでご覧いただけます。",
+      sec_map_btn: "台湾全土ツバメ繁殖ヒートマップを見る",
+      sec_map_note: "※ 台北市野鳥学会 (WBST) が運用する対話型オンライン地理情報システムです",
+
       vket_title: "この小さなツバメを、あなたのメタバースへ",
       vket_desc: "台湾の街角で紡がれたこの物語を、3DモデルとしてVirtual Market 2026 Winterに出展します。細部まで忠実に再現した家燕3Dモデルを無料配布中。ぜひワールドやアバターのお供にお迎えください。",
       vket_btn_booth: "BOOTHで3Dモデルを無料ダウンロード",
@@ -672,6 +782,7 @@
       nav_conflict: "Friction",
       nav_solution: "Remedy",
       nav_moments: "Moments",
+      nav_map: "National Map",
       nav_vket: "Virtual Realm",
 
       sec1_subtitle: "Street Architecture",
@@ -713,6 +824,20 @@
       photo3_title: "Seamless Harmony in the City",
       photo3_desc: "A red decorative board beneath a shop sign cradling new life, bringing quiet nature into the bustling rhythm of Taiwan.",
 
+      sec_map_subtitle: "Citizen Science Showcase",
+      sec_map_title: "Tracing Urban Wildlife ── Taiwan Barn Swallow Nest Heat Map",
+      sec_map_desc: "From bustling metro centers to quiet towns, residents and volunteers across Taiwan took to the streets to record nesting locations. This is more than scientific data—it is a living, crowd-sourced atlas of urban wildlife coexistence.",
+      sec_map_feat1_title: "Real-World Arcade Footprints",
+      sec_map_feat1_desc: "Aggregating first-hand observations from sheltered arcades across Taiwan, showcasing how closely swallows nest alongside communities.",
+      sec_map_feat2_title: "Dynamic Heat Map Visualization",
+      sec_map_feat2_desc: "Utilizing interactive GIS mapping to clearly illustrate nesting hot spots, population dynamics, and seasonal breeding patterns.",
+      sec_map_feat3_title: "The Power of Grassroots Stewardship",
+      sec_map_feat3_desc: "Driven by store owners, volunteers, and citizens whose daily care transforms concrete corridors into peaceful urban sanctuaries.",
+      sec_map_cta_title: "Taiwan Barn Swallow Nest Heat Map (GIS Web App)",
+      sec_map_cta_desc: "Explore real-time interactive mapping showing nest reports, breeding records, and geographic heat clusters across Taiwan.",
+      sec_map_btn: "Explore Interactive Nest Heat Map",
+      sec_map_note: "※ Interactive GIS Web Application operated by Wild Bird Society of Taipei (WBST)",
+
       vket_title: "Bring This Little Swallow Into Your Virtual Realm",
       vket_desc: "We are bringing this heartwarming story from Taiwan's arcades to Virtual Market 2026 Winter. Our optimized 3D Barn Swallow model is completely free to download. Welcome it as an avatar accessory or world decoration!",
       vket_btn_booth: "Get Free 3D Model on BOOTH",
@@ -736,6 +861,7 @@
         { id: 'sec-conflict', labelKey: 'nav_conflict', theme: 'bg-theme-conflict' },
         { id: 'sec-solution', labelKey: 'nav_solution', theme: 'bg-theme-solution' },
         { id: 'sec-moments', labelKey: 'nav_moments', theme: 'bg-theme-moments' },
+        { id: 'sec-map', labelKey: 'nav_map', theme: 'bg-theme-map' },
         { id: 'sec-vket', labelKey: 'nav_vket', theme: 'bg-theme-vket' }
       ];
 
